@@ -128,22 +128,62 @@
             <div class="container clearfix">
                 <div class="row">
                     <div class="entry-title">
-                        <h2>Basics of Reinforcement Learning</h2>
+                        <h2>Basics of Reinforcement Learning (1/2)</h2>
                     </div>      
                     <div class="mt-0">
                         <ul class="entry-meta">
-                            <li><i class="icon-calendar3"></i> June 30th, 2025</li>
+                            <li><i class="icon-calendar3"></i> August 2th, 2025</li>
                         </ul>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <img src='../../static/david/about.jpg' />
+                        <img src='../../static/david/blog/1.jpg' />
                     </div>
                     <div class="col-md-6">
                         <p>
-                            We have to start somewhere when we want to learn about Reinforcement Learning. The best I can do is to read a good book. But, it is also a very good idea to grasp the basics with some examples.
-                        </p>                    
+                            The basics of Reinforcement Learning that we are going to describe in this article are based on the intelligent agents of <a href="#norvig_AIMA">[1]</a>. This is a very interesting approach given that it serves to ground what Reinforcement Learning really is, and what is common and related to intelligent agents in Artificial Intelligence.
+                        </p>
+                        <p>
+                            <a href="#norvig_AIMA">[1]</a> present intelligent agents as subjects that interacts with their environment. They perceive through sensors and actuate, performing actions that may change the environment or not.
+                        </p>
+                        <h3>Intelligent agent version 1</h3>
+                        <p>
+                            Imagining a portable air conditioning device as our agent, it interacts with the room through one temperature sensor and the activation and deactivation of the cooling compressor. There are many other components and interactions that may occur with this example, such as the fan speed, the water the device throws, etc. Nevertheless, in this example we are going to make an abstraction and consider only those mentioned.
+                        </p>
+                        <p>
+                            The environment is the room where the device is plugged in, considering that the agent is portable. The temperature of the room is the only perception that the agent has of the environment. The agent measures the temperature through one sensor installed on the front of the device. It has a fan that is always at the same speed, and it activates the cooling compressor (the actuator) when it perceive that temperature is over the desire temperature of the ambience (the performance measure). On the contrary, it stops the compressor when the agent perceive that the temperature of the environment is below the programmed temperature.
+                        </p>
+                        <p>
+                            We have described the PEAS (Performance, Environment, Actuators, Sensors) concept of the author in our example, and also the rationale of the agent, it's programming. The latter is possible to describe it as rules that could be displayed easily on a table, where each perception example is followed by an action of the actuator, which is very basic, just activating or deactivating the cooling compressor.
+                        </p>
+                        <p>
+                            The described agent is deterministic. This property is observable through the perception / action table described early. We can imagine many more rules in it, and all will allow the reader to understand what is the following agent action, just by reading the temperature displayed by the device's sensor. Not every intelligent agent is that predictable. The architecture of the example is very simple, it consist of one and only agent. But there could other different agents located in the same device (multi-agent), acting as one or in their own behalf.
+                        </p>
+                        <p>
+                            <a href="#norvig_AIMA">[1]</a> describes four kinds of agents:
+                            <ol>
+                                <li>Simple reflex agent: Agents that are simplistic, that respond with rules programmed based on the inputs observed in the environment. The author is using the wording reflex to described the ignorance of the perception history of the agent. It means that it does not take into account the previous temperature reads and actions taken (activating or deactivating the cooling) before, it actuates according only to a given perception input. It only reacts, it is very predictable.</li>
+                                <li>Model-based reflex agents: Agents that make use of a model of the environment to bring a more complex perception of the environment, through states, acknowledging what is the current internal state of the environment, and what previous actions have produced before a temperature reading (sensing) and acting.</li>
+                                <li>Goal-based agents: Agents that have a goal more complex that the given example. The example agent is to keep the temperature of the room according to the programming, but the kind of agents the author is referring to with this class is to point out to agents that makes use of search and planning in artificial intelligence.</li>
+                                <li>Utility-based agents: The reason that explain this class for the author is to justify intelligent agents that not just accomplish goals, but also looks to maximize how useful the actions taken to accomplish the goal were. They make use of complex algorithm that determines the utility maximization</li>
+                                <li>Learning agents: A learning agent is an agent that change its components in order to align itself with the feedback obtained. It becomes competent is use cased where the agent ignores the actual environment. The author use other different components to describe how the agent adapts, how learning occurs, etc.</li>
+                            </ol>
+                        </p>
+                        <p>
+                            We have described a very simplistic intelligent agent. The reader can imagine upgrading the system with more rules, or imagine other components of the system that interacts with the environment differently, that call for a more sophisticated reasoning. It is also possible to have a glimpse of where Reinforcement Learning might be. Consequently, it serves to understand that agents are not only present in artificial intelligence because of Reinforcement Learning. And that the global description of intelligent agents grounds the components of Reinforcement Learning in the following post.
+                        </p>
+                        <p>
+                            <strong>References:</strong>
+                            <ul>
+                                <li id="norvig_AIMA">
+                                    [1] Russell, Stuart, and Peter Norvig. Artificial Intelligence. 4th ed. Pearson, 2020.
+                                </li>
+                                <!-- <li id="sutton_RL">
+                                    [2] Sutton, Richard S, and Andrew G Barto. Reinforcement Learning. 2nd ed. Adaptive Computation and Machine Learning Series. Bradford Books, 2018.
+                                </li> -->
+                            </ul>
+                        </p>                
                     </div>
                 </div>
             </div>
